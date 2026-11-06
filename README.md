@@ -110,7 +110,7 @@ Raw Camera Input
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/tranhoanganhuser-wq/ImageProcessing_Project2026.git
+   git clone https://github.com/anhtran-cs/ImageProcessing_Project2026.git
    cd ImageProcessing_Project2026
    ```
 
@@ -172,5 +172,5 @@ python tests/test_comprehensive.py
 
 ## Author
 
-- **Hoang Anh Tran** ([@tranhoanganhuser-wq](https://github.com/tranhoanganhuser-wq))
+- **Hoang Anh Tran** ([@anhtran-cs](https://github.com/anhtran-cs))
 - Focus: Computer Science, Computer Vision, Data Science & Machine Learning.
