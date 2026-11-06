@@ -35,8 +35,8 @@ for d in ("document_scanner", "core", ""):
         sys.path.insert(0, p)
 
 # Import tất cả hàm cần test
-from core.xulyanh import read_image, save_image, cv_to_qimage, ensure_uint8
-from document_scanner.xulytailieu import (
+from core.image_processing import read_image, save_image, cv_to_qimage, ensure_uint8
+from document_scanner.doc_processor import (
     _order_points,
     four_point_transform,
     detect_document_corners,

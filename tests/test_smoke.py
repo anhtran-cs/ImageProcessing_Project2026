@@ -10,8 +10,8 @@ sys.path.insert(0, str(ROOT / "mini_photoshop"))
 sys.path.insert(0, str(ROOT / "document_scanner"))
 sys.path.insert(0, str(ROOT))
 
-from xulyanh import adjust_brightness, adjust_contrast, apply_blur, compute_histogram
-from xulytailieu import process_document, export_images_to_pdf
+from filters import adjust_brightness, adjust_contrast, apply_blur, compute_histogram
+from doc_processor import process_document, export_images_to_pdf
 
 
 def main():

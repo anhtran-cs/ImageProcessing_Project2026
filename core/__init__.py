@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from .xulyanh import (
+from .image_processing import (
     read_image,
     save_image,
     set_label_image,
@@ -8,7 +8,10 @@ from .xulyanh import (
     cv_to_qimage,
     image_name,
 )
-from .giaodien import make_image_label
+from .gui import make_image_label
+
+# Compatibility aliases
+from . import image_processing as imgprocessing
 
 __all__ = [
     "read_image",
@@ -18,4 +21,5 @@ __all__ = [
     "cv_to_qimage",
     "image_name",
     "make_image_label",
+    "imgprocessing",
 ]

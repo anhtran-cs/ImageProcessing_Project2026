@@ -35,7 +35,7 @@ for p in (CUR_DIR, ROOT):
 
 from core import read_image, save_image, set_label_image, make_image_label
 from histogram import HistogramCanvas
-from xulyanh import (
+from filters import (
     adjust_brightness,
     adjust_contrast,
     apply_blur,

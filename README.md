@@ -19,23 +19,20 @@ An end-to-end desktop computer vision application suite built with **Python**, *
 ChuDe3_XuLyAnh/
 ├── core/                           # Shared utility modules
 │   ├── __init__.py                 # Exported core interfaces
-│   ├── giaodien.py                 # Common UI components & themes
-│   └── xulyanh.py                  # Unicode-safe image I/O & Qt format conversions
+│   ├── gui.py                      # Common UI components & themes
+│   └── image_processing.py         # Unicode-safe image I/O & Qt format conversions
 ├── mini_photoshop/                 # Application 1: Digital Image Editor
 │   ├── __init__.py
-│   ├── main.py                     # Mini Photoshop PySide6 GUI
+│   ├── filters.py                  # Core image processing operators & filters
 │   ├── histogram.py                # Real-time Matplotlib histogram canvas
-│   └── xulyanh.py                  # Core image processing operators & filters
+│   └── main.py                     # Mini Photoshop PySide6 GUI
 ├── document_scanner/               # Application 2: Document Scanner & Digitizer
 │   ├── __init__.py
-│   ├── main.py                     # Document Scanner PySide6 GUI
-│   └── xulytailieu.py              # Perspective warp, thresholding, PDF export engine
-├── tests/                          # Automated test suite & test datasets
-│   ├── kiemthu_nhanh.py            # Quick headless algorithm smoke tests
-│   ├── kiemthu_7_nhom_anh.py       # Benchmark across 7 image degradation categories
-│   ├── kiemthu_project2_toandien.py# Comprehensive unit test suite (100+ assertions)
-│   ├── ketqua_7_nhom/              # Visual output benchmarks for 7 test groups
-│   └── preview_20_anh_sang_deu/    # Real-world benchmark document images
+│   ├── doc_processor.py            # Perspective warp, thresholding, PDF export engine
+│   └── main.py                     # Document Scanner PySide6 GUI
+├── tests/                          # Automated test suite
+│   ├── test_smoke.py               # Fast headless algorithm smoke tests (<1s)
+│   └── test_comprehensive.py       # Full unit & stress test suite (100+ assertions)
 ├── .gitignore                      # Git exclusion rules (pycache, virtualenvs, etc.)
 ├── LICENSE                         # MIT License
 ├── requirements.txt                # Python package dependencies
@@ -153,17 +150,14 @@ python document_scanner/main.py
 
 ## Testing & Quality Assurance
 
-The repository includes a comprehensive headless test suite verifying algorithmic correctness and performance benchmarks without opening GUI windows.
+The repository includes headless test suites verifying algorithmic correctness, edge cases, and performance without opening GUI windows.
 
 ```bash
-# Run quick smoke tests
-python tests/kiemthu_nhanh.py
+# Run quick smoke test (< 1 second)
+python tests/test_smoke.py
 
-# Run comprehensive algorithm suite
-python tests/kiemthu_project2_toandien.py
-
-# Run multi-category image benchmark (100 synthetic & real scenarios)
-python tests/kiemthu_7_nhom_anh.py
+# Run comprehensive algorithm suite (100+ assertions across 10 test groups)
+python tests/test_comprehensive.py
 ```
 
 ---

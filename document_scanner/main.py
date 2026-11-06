@@ -35,7 +35,7 @@ for p in (CUR_DIR, ROOT):
         sys.path.insert(0, str(p))
 
 from core import read_image, save_image, set_label_image, make_image_label
-from xulytailieu import (
+from doc_processor import (
     document_metrics,
     process_document,
     export_images_to_pdf,

@@ -3,7 +3,7 @@ from __future__ import annotations
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
-from xulyanh import compute_histogram
+from filters import compute_histogram
 
 
 class HistogramCanvas(FigureCanvas):
